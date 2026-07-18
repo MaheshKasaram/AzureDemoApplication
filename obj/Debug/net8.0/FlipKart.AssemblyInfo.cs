@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FlipKart")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+881d1c8efe2e16f6e00c098843aeb037171cb74c")]
 [assembly: System.Reflection.AssemblyProductAttribute("FlipKart")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FlipKart")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
