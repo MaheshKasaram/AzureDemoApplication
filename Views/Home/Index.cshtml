@@ -1,8 +1,56 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+@{
+    var email = TempData["UserEmail"] as string;
+}
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container py-5">
+    <div class="row align-items-center mb-5">
+        <div class="col-md-7">
+            <h1 class="display-4">Welcome to FlipKart Demo</h1>
+            <p class="lead">A sample Razor Pages / MVC hybrid application showing a simple login flow and a friendly UI.</p>
+            @if (!string.IsNullOrEmpty(email))
+            {
+                <p class="mt-3">Hello, <strong>@email</strong> — you're now signed in. Explore the demo features below.</p>
+            }
+        </div>
+        <div class="col-md-5 text-center">
+            <img src="/images/hero-shopping.svg" alt="shopping" class="img-fluid" style="max-height:220px" />
+        </div>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Browse Products</h5>
+                    <p class="card-text">View a curated list of products and filter them by category, price, and rating.</p>
+                    <a class="btn btn-outline-primary" href="#">Explore</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Your Orders</h5>
+                    <p class="card-text">Keep track of orders, view status, and manage returns.</p>
+                    <a class="btn btn-outline-primary" href="#">View Orders</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Account Settings</h5>
+                    <p class="card-text">Manage your profile, payment methods, and shipping addresses.</p>
+                    <a class="btn btn-outline-primary" href="#">Manage</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="mt-5 text-center text-muted">
+        <small>Demo app · Deployed by Mahesh · Built with ASP.NET Core</small>
+    </footer>
 </div>

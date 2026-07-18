@@ -4,7 +4,8 @@
 
 <div class="text-center">
     <h1 class="display-4">Sign in</h1>
-    <form method="post" action="/Account/Login">
+    <form method="post" action="/Home/Login">
+        @Html.AntiForgeryToken()
         <div class="mb-3">
             <label for="inputEmail" class="form-label">Email address</label>
             <input type="email" class="form-control" id="inputEmail" name="email" required />
@@ -14,5 +15,8 @@
             <input type="password" class="form-control" id="inputPassword" name="password" required />
         </div>
         <button type="submit" class="btn btn-primary">Login</button>
+        @if(ViewBag.Error != null) {
+            <div class="text-danger mt-2">@ViewBag.Error</div>
+        }
     </form>
 </div>
